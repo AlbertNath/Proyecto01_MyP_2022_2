@@ -1,7 +1,53 @@
-import csv
+import csv, re
 
-
+# Uso del método open() para abrir el archivo csv del proyecto
 archivo = open('dataset1.csv')
+
+# Uso del objeto csv.reader para leer el archivo
+lector = csv.reader(archivo)
+
+# Creación de una lista para leer la primera linea que es el encabezado
+encabezado = []
+encabezado = next(lector)
+encabezado
+
+# Prueba de que el encabezado sea del formato correcto
+"""
+def checar_encabezado(encabezado):
+    for i in range(0,5):
+        if 'origin' or 'destination' or 'origin_latitude' or 'origin_longitude' or 'destination_latitude' or 'destination_longitude' not in encabezado[i]:
+            return False
+        else:
+            return True
+# Salió AssertionError (Mar 5)
+assert(checar_encabezado(encabezado))
+"""
+
+# Creación de una lista para leer los 3000 tickets
+tickets = []
+for i in lector:
+    tickets.append(i)
+tickets
+
+# Prueba de que los tickets sean del formato correcto
+def checar_ticket(tickets):
+    for i in range(0,1):
+        assert(re.search('[A-Z]{3}', tickets[i]))
+    for i in range(2,5):
+        assert(re.search('[+-]?[0-9]+\.[0-9]+', tickets[i]))
+for i in range(len(tickets)):
+    checar_ticket(tickets[i])
+
+
+# Cerrar el archivo una vez terminado la lectura
+archivo.close()
+
+print(encabezado)
+#print(tickets)
+
+
+
+
 
 
 """
