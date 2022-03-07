@@ -81,7 +81,7 @@ se nos sean regresados códigos de error conocidos en la documentación:
 https://openweathermap.org/faq#:~:text=of%20City%20IDs%3F-,API%20errors,-API%20calls%20return
 
 requests ya tiene funciones para manejar malas respuestas:
-https://docs.python-requests.org/en/latest/user/quickstart/#:~:text=Response%20Status%20Codes%C2%B6
+https://docs.python-requests.org/en/latest/user/quickstart/#:~:text=Response%20Status%20Codes
 """
 def comprueba_respuesta(respuesta:Response):
     if(respuesta.status_code != req.codes.ok):
