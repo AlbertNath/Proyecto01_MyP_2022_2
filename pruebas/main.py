@@ -1,7 +1,7 @@
 import csv, re
 
 # Uso del método open() para abrir el archivo csv del proyecto
-archivo = open('dataset1.csv')
+archivo = open('../dataset1.csv')
 
 # Uso del objeto csv.reader para leer el archivo
 lector = csv.reader(archivo)
@@ -43,7 +43,28 @@ for i in range(len(tickets)):
 archivo.close()
 
 print(encabezado)
-#print(tickets)
+
+"""
+Método para cargar un caché de origen.
+Guardamos en un diccionario el código IATA y las coordenadas
+de la ciudad.
+NOTE (7/mar/22): ¿es impráctico hacer dos cachés, uno de
+origen y otro de destino?
+"""
+def carga_cache(datos:list):
+    cache = {}
+    for i in range(len(datos)):
+        if datos[i][0] in cache.keys():
+            continue
+        else:
+            cache[datos[i][0]] = datos[i][2:4]
+    return cache
+
+prueba = carga_cache(tickets)
+# Imprime llaves
+print(prueba.keys())
+# Imprime el diccionario
+print(prueba)
 
 
 
