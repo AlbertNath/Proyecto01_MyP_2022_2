@@ -66,8 +66,12 @@ print(prueba.keys())
 # Imprime el diccionario
 print(prueba)
 
-
-
+# Nombre de ciudad
+origen = tickets[0][0]
+# Llave de ciudad
+key = prueba[origen]
+# Imprimir latitud y longitud de TLC
+print(key[0], key[1])
 
 
 

@@ -42,8 +42,8 @@ def carga_cache(datos:list):
 cache = carga_cache(tickets)
 
 
-print(cache.keys())
-print(cache)
+#print(cache.keys())
+#print(cache)
 
 
 
