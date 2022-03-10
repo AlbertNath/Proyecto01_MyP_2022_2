@@ -8,6 +8,8 @@ tmp/
 *.egg
 build
 htmlcov
+__pycache__/
+constantes.py
 
 ## emacs autocomplete
 .auctex-auto/
