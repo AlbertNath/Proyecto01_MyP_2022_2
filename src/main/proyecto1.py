@@ -15,11 +15,12 @@ for i in range(len(tickets)):
     origenKey = cache[origen]
     destinoKey = cache[destino]
     # Solicitud de datos con latitud y longitud 
-    datosOrigen = solicita_datos(origenKey[0], origenKey[1])
-    datosDestino = solicita_datos(destinoKey[0], destinoKey[1])
+    datosOrigen = solicita_datos(float(origenKey[0]), float(origenKey[1]))
+    datosDestino = solicita_datos(float(destinoKey[0]), float(destinoKey[1]))
     # Respuestas
     respuestaOrigen = depura_respuesta(datosOrigen)
     respuestaDestino = depura_respuesta(datosDestino)
 """
 Error mio en primer intento tratando de acceder latitud y longitud con origen[0] y origen[1]
+Segundo error por meter parametros en la función solicita_datos sin convertirlos a float.
 """
