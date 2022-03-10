@@ -1,7 +1,7 @@
 import csv, re
 
 # Uso del método open() para abrir el archivo csv del proyecto
-archivo = open('../dataset1.csv')
+archivo = open('dataset1.csv')
 
 # Uso del objeto csv.reader para leer el archivo
 lector = csv.reader(archivo)
