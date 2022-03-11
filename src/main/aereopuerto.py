@@ -14,6 +14,7 @@ class aereopuerto:
 
 
     def toString(self):
+        """Método para representación en cadena"""
         str = "Aereopuerto: {}\nClima: {}\nDescripción: {}\nTemperatura: {}\nSensación térmica: {}\nVelocidad viento:{}\nNubosidad: {}\n"
 
         return str.format(self.codigo_IATA,

@@ -19,3 +19,18 @@ python3 main/main.py
 
 ## Ejecutar pruebas: 
 _Próximamente, no es un bug, es una característica ;)_.
+
+## Integrantes: 
+
+- Karyme Ivette Azpeitia García
+- Ui Chul Shin
+- Alberto Natanael Medel Piña
+
+## Bibliografía: 
+
+1. [Requests Docs](https://docs.python-requests.org/en/latest/user/quickstart/)
+1. [Unit Testing in Python Tutorial](https://www.datacamp.com/community/tutorials/unit-testing-python)
+1. [Python | Accessing Key-value in Dictionary ](https://discord.com/channels/800826113906835474/800826113906835476/951709366275407922)
+1. [Python regex | Check whether the input is Floating point number or not](https://www.geeksforgeeks.org/python-regex-check-whether-the-input-is-floating-point-number-or-not/)
+1. [Dictionaries in Python](https://realpython.com/python-dicts/)
+1. [Python Tutorial: Working with CSV file for Data Science](https://discord.com/channels/800826113906835474/800826113906835476/951709877401710653)

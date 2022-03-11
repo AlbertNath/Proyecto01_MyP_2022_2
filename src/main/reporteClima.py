@@ -10,7 +10,7 @@ class reporteClima:
     
     """
     Métodos para solicitar una petición a la API de
-    OpenWeatherMap. Recibimos un {?} como datos limpios
+    OpenWeatherMap. Recibimos un diccionario como datos limpios
     de entrada y procesamos
     """
 
