@@ -9,7 +9,7 @@ class main:
     reporte = reporteClima()
     salida = Salida()
     dic =  entrada.ejecutar_entrada()
-    #dic2 = reporte.depura_respuesta(dic)
+    dic2 = reporte.depura_respuesta.solicitar_respuesta(dic)
     salida.salida(dic)
 
     
