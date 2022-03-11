@@ -1,10 +1,18 @@
-import entrada, reporteClima
+import entrada, reporteClima, salida
+from salida import *
 from entrada import *
 from reporteClima import *
 
 class main:
 
     entrada = Entrada()
+    reporte = reporteClima()
+    salida = Salida()
+    entrada.ejecutar_entrada()
+    #dic2 = reporte.depura_respuesta(dic)
+    #salida.salida(dic2)
+
+    
 
     def datos_tickets(lst):
         for i in range(len(tickets)):
@@ -17,4 +25,4 @@ class main:
             respuestaOrigen = depura_respuesta(datosOrigen) # Respuestas
             respuestaDestino = depura_respuesta(datosDestino)
         
-    print("Al tqm ya imprime algo c: ya lo podemos enviar?")
+    

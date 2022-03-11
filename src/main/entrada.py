@@ -12,6 +12,7 @@ class Entrada:
             ticket.append(i)
             lineas += 1
         return ticket
+    
     def carga_cache(datos:list):
         cache = {}
         for i in range(len(datos)):
@@ -24,7 +25,8 @@ class Entrada:
                 else:
                     cache[datos[i][1]] = datos[i][4:6]
         return cache
+    
     def ejecutar_entrada():
-        cache = carga_cache(tickets(entrada("../dataset1.csv")))
-
+        cache = carga_cache(tickets(entrada("./csv/dataset1.csv")))
+        return cache
 
