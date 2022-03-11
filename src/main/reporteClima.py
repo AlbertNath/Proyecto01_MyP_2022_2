@@ -8,7 +8,6 @@ sys.path.append(os.path.dirname(SCRIPT_DIR))
 """
 class reporteClima:
     
-    url = "http://api.openweathermap.org/data/2.5/weather" # String general para declararlo solo una vez
     """
     Métodos para solicitar una petición a la API de
     OpenWeatherMap. Recibimos un {?} como datos limpios
@@ -16,7 +15,8 @@ class reporteClima:
     """
 
 
-    def solicita_datos(latitud, longitud):
+    def solicita_datos(self, latitud, longitud):
+        url = "http://api.openweathermap.org/data/2.5/weather" # String general para declararlo solo una vez
         if type(latitud) != float or type(longitud) != float:
             raise TypeError('Formato de coordenadas inválido.')
         # Comprobamos que los argumentos sean de tipo flotante
@@ -47,7 +47,7 @@ class reporteClima:
         """
 
 
-    def depura_respuesta(respuesta):
+    def depura_respuesta(self, respuesta):
         if type(respuesta) != dict:
             raise TypeError('Argumento inválido')
        

@@ -1,20 +1,21 @@
 import csv
 class Entrada:
     
-    def entrada(archivo):
-        lector = csv.reader(open(arhivo, "r"))
-        archivo.close()
-        return lector
-    def tickets(lst):
-        ticket = []
+    def entrada(self, archivo):
+        r = open(archivo, "r")
+        lector = csv.reader(r)
+        ticket = [] 
         linea  = 0
-        for i in letor:
+        for i in lector:
             ticket.append(i)
-            lineas += 1
+            linea += 1
+        r.close()
         return ticket
-    def carga_cache(datos:list):
+    
+    
+    def carga_cache(self, datos:list):
         cache = {}
-        for i in range(len(datos)):
+        for i in range(2,len(datos)):
             if datos[i][0] in cache.keys():
                 continue
             else:
@@ -24,7 +25,8 @@ class Entrada:
                 else:
                     cache[datos[i][1]] = datos[i][4:6]
         return cache
-    def ejecutar_entrada():
-        cache = carga_cache(tickets(entrada("../dataset1.csv")))
-
+    
+    def ejecutar_entrada(self):
+        cache = self.carga_cache((self.entrada("./csv/dataset1.csv")))
+        return cache
 

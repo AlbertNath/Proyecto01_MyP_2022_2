@@ -1,20 +1,27 @@
-import entrada, reporteClima
+from aereopuerto import *
+from salida import *
 from entrada import *
 from reporteClima import *
 
 class main:
 
+    # Intanciando clases
     entrada = Entrada()
+    reporte = reporteClima()
 
-    def datos_tickets(lst):
-        for i in range(len(tickets)):
-            origen = tickets[i][0] # Nombres de Ciudad de 3 caracteres
-            destino = tickets[i][1]
-            origenKey = cache[origen] # Llave de la ciudad
-            destinoKey = cache[destino]
-            datosOrigen = solicita_datos(float(origenKey[0]), float(origenKey[1])) 
-            datosDestino = solicita_datos(float(destinoKey[0]), float(destinoKey[1]))
-            respuestaOrigen = depura_respuesta(datosOrigen) # Respuestas
-            respuestaDestino = depura_respuesta(datosDestino)
-        
-    print("Al tqm ya imprime algo c: ya lo podemos enviar?")
+    dic =  entrada.ejecutar_entrada() # Esto lee el csv de entrada
+    respuestas = {}
+
+    """
+    Con el diccionaro limpio del csv, solicitamos datos a la API
+    y depuramos respuestas para crear objetos e imprimir la información
+    reelevante.
+    """
+    for key in dic:
+        coordenadas = dic[key]
+        resp = reporte.solicita_datos(float(coordenadas[0]),float(coordenadas[1]))
+        dep = reporte.depura_respuesta(resp)
+
+        puertito = aereopuerto(dep,key)
+
+        print(puertito.toString())
