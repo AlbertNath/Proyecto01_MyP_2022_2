@@ -1,7 +1,7 @@
 import csv
 
 # Uso del método open() para abrir el archivo csv del proyecto
-archivo = open("dataset1.csv", "r")
+archivo = open("../dataset1.csv", "r")
 
 # Uso del objeto csv.DictReader para leer el archivo a un Diccionario
 lector = csv.reader(archivo)
