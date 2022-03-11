@@ -14,7 +14,7 @@ class main:
 
     
 
-    def datos_tickets(self, lst):
+    def datos_tickets(self, tickets, cache):
         for i in range(len(tickets)):
             origen = tickets[i][0] # Nombres de Ciudad de 3 caracteres
             destino = tickets[i][1]
