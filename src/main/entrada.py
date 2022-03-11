@@ -2,15 +2,16 @@ import csv
 class Entrada:
     
     def entrada(archivo):
-        lector = csv.reader(open(arhivo, "r"))
+        lector = csv.reader(open(archivo, "r"))
         archivo.close()
         return lector
+    
     def tickets(lst):
         ticket = []
         linea  = 0
-        for i in letor:
+        for i in lst:
             ticket.append(i)
-            lineas += 1
+            linea += 1
         return ticket
     
     def carga_cache(datos:list):

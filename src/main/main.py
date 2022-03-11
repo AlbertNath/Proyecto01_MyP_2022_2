@@ -8,7 +8,8 @@ class main:
     entrada = Entrada()
     reporte = reporteClima()
     salida = Salida()
-    entrada.ejecutar_entrada()
+    dic =  entrada.ejecutar_entrada()
+
     #dic2 = reporte.depura_respuesta(dic)
     #salida.salida(dic2)
 
