@@ -14,7 +14,7 @@ class aereopuerto:
 
 
     def toString(self):
-        str = "Aereopuerto: {}\nClima: {}\nDescripción: {}\nTemperatura: {}\nSensación térmica: {}\n Velocidad viento:{}\nNubosidad: {}\n"
+        str = "Aereopuerto: {}\nClima: {}\nDescripción: {}\nTemperatura: {}\nSensación térmica: {}\nVelocidad viento:{}\nNubosidad: {}\n"
 
         return str.format(self.codigo_IATA,
                           self.clima,

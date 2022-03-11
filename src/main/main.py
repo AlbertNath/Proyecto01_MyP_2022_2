@@ -10,7 +10,6 @@ class main:
     reporte = reporteClima()
 
     dic =  entrada.ejecutar_entrada() # Esto lee el csv de entrada
-    respuestas = {}
 
     """
     Con el diccionaro limpio del csv, solicitamos datos a la API
