@@ -9,13 +9,12 @@ class main:
     reporte = reporteClima()
     salida = Salida()
     dic =  entrada.ejecutar_entrada()
-
-    #dic2 = reporte.depura_respuesta(dic)
-    #salida.salida(dic2)
+    dic2 = reporte.depura_respuesta(dic)
+    salida.salida(dic2)
 
     
 
-    def datos_tickets(lst):
+    def datos_tickets(self, lst):
         for i in range(len(tickets)):
             origen = tickets[i][0] # Nombres de Ciudad de 3 caracteres
             destino = tickets[i][1]

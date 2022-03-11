@@ -16,7 +16,7 @@ class reporteClima:
     """
 
 
-    def solicita_datos(latitud, longitud):
+    def solicita_datos(self, latitud, longitud):
         if type(latitud) != float or type(longitud) != float:
             raise TypeError('Formato de coordenadas inválido.')
         # Comprobamos que los argumentos sean de tipo flotante
@@ -47,7 +47,7 @@ class reporteClima:
         """
 
 
-    def depura_respuesta(respuesta):
+    def depura_respuesta(self, respuesta):
         if type(respuesta) != dict:
             raise TypeError('Argumento inválido')
        
