@@ -17,3 +17,4 @@ class main:
             respuestaOrigen = depura_respuesta(datosOrigen) # Respuestas
             respuestaDestino = depura_respuesta(datosDestino)
         
+    print("Al tqm ya imprime algo c: ya lo podemos enviar?")
