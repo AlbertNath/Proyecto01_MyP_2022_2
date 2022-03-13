@@ -1,0 +1,37 @@
+{\textbf{Análisis del problema:}}
+\begin{itemize}
+  \item \textit{¿Qué es lo que queremos obtener?}:\\
+        R: Deseamos obtener la información climatológica de los aeropuertos de origen y destino
+        con base en información recabada de los boletos de vuelo.\\
+
+  \item \textit{¿Cuáles son los datos con los que contamos? ¿Son suficientes?}:\\
+        R: Contamos con un archivo tipo \textit{Comma Separated Value (CSV)} que contiene los
+        códigos IATA, el valor de longitud y latitud de los aeropuertos tanto de orígen como de
+        destino.\\
+        Consideramos que estos datos son suficientes ya que al ejecutar un \textit{API request}
+        a la página de servivcio \textit{OpenWeatherMap} con los datos que disponemos nos
+        proporcionará la salida de datos que buscamos obtener.\\
+
+  \item \textit{¿Qué hace que el resultado obtenido resuelva el problema?}:\\
+        R: El programa que implementa el algoritmo diseñado proporcionará una tabla donde se
+        muestre el clima de orígen y destino de acuerdo a los tickets proporcionados, con la
+        información de
+        interés sobre el clima.\\
+
+  \item \textit{¿Qué operaciones o construcciones se deben obtener para llegar a la
+        solución?}:
+        \begin{enumerate}
+          \item Procesar el archivo \textit{CSV} para extraer la información.
+
+          \item Obtener la información adecuada de los aeropuertos como latitud, longitud y
+                el código IATA en un formato más accesible.
+
+          \item Solicitar a la API información acerca del clima con los datos que previamente
+                procesamos del \textit{CSV}.
+
+          \item Depurar la respuesta de la API extrayendo solo los datos de interés.
+
+          \item Dar un formato legible y amigable como salida del programa de esta información.
+        \end{enumerate}
+
+\end{itemize}
