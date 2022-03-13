@@ -1,5 +1,5 @@
 from reporteClima import *
-from ..gui.interfaz import *
+from gui.interfaz import *
 
 class Salida:
     
