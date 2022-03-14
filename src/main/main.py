@@ -1,34 +1,21 @@
 from salida import *
-
-#from entrada import *
-#from reporteClima import *
-#from gui.interfaz import *
-#from aereopuerto import *
+from entrada import *
+from reporteClima import *
+from interfaz import *
+from aereopuerto import *
+from tkinter import *
 
 
 class main:
 
-    # Intanciando clases
+    """Instanciando clases"""
     entrada = Entrada()
     reporte = reporteClima()
     salida  = Salida() 
-    gui = Interfaz()
-
-    dic =  entrada.ejecutar_entrada() # Esto lee el csv de entrada
-    gui.ejecutar(salida.sal(dic, reporte, gui))
-    
-    """
-    Con el diccionaro limpio del csv, solicitamos datos a la API
-    y depuramos respuestas para crear objetos e imprimir la información
-    reelevante.
-    """
-    """
-    for key in dic:
-        coordenadas = dic[key]
-        resp = reporte.solicita_datos(float(coordenadas[0]),float(coordenadas[1]))
-        dep = reporte.depura_respuesta(resp)
-
-        puertito = aereopuerto(dep,key)
-
-        print(puertito.toString())
-"""
+    ventana_principal = Tk()
+    gui = Interfaz(ventana_principal)
+    """Lectura de csv de entrda"""
+    dic =  entrada.ejecutar_entrada()
+    """Ejecutamos GUI"""
+    gui.ejecutar(dic,ventana_principal,reporte,salida)
+   
