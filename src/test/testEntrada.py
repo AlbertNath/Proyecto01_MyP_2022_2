@@ -7,7 +7,7 @@ class TestEntrada(unittest.TestCase):
     def test_tickets(self):
         clase = Entrada()
         archivo = "./csv/dataset1.csv"
-        tickets = clase.entrada(archivo)[0]
+        tickets = clase.leer_entrada(archivo)[0]
         for i in range(1,len(tickets)):
             self.assertRegex(tickets[i][0], '[A-Z]{3}', 'El formato de la ciudad es incorrecta')
             self.assertRegex(tickets[i][1], '[A-Z]{3}', 'El formato de la ciudad es incorrecta')
@@ -20,5 +20,5 @@ class TestEntrada(unittest.TestCase):
     def test_lineas(self):
         clase = Entrada()
         archivo = "./csv/dataset1.csv"
-        lineas = clase.entrada(archivo)[1]
+        lineas = clase.leer_entrada(archivo)[1]
         self.assertEqual(lineas, 3000, 'El número de tickets no son 3000')

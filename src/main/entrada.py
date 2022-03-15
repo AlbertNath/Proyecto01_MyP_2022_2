@@ -3,7 +3,7 @@ import csv #Necesario para procesar los csv
 class Entrada:
     """Clase para manejo de entrada"""
 
-    def entrada(self, archivo):
+    def leer_entrada(self, archivo):
         """
         Método para analizar un archivo csv y extraer una
         lista de listas con la información del archivo.
@@ -41,6 +41,6 @@ class Entrada:
         Método para leer y cargar en el caché la información del
         archivo csv
         """
-        cache = self.carga_cache((self.entrada("./csv/dataset1.csv")))
+        cache = self.carga_cache((self.leer_entrada("./csv/dataset1.csv")[0]))
         return cache
 
