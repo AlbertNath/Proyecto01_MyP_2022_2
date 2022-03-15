@@ -1,46 +1,39 @@
 import requests as req
 import sys
-import os
+sys.path.insert(1, '../../Proyecto01_MyP_2022_2/src/main')
+#import main.constantes as cons
 import constantes as cons
-"""
-Métodos para solicitar una petición a la API de
-OpenWeatherMap. Recibimos un diccionario como datos limpios
-de entrada y procesamos
-"""
-    
+
+
 class reporteClima:
-        
+        """
+        Clase para realizar peticiones a la API de
+        OpenWeatherMap. Recibimos un diccionario como datos limpios
+        de entrada y procesamos.
+        """
         
         def solicita_datos(self, latitud, longitud):
                 """
                 Método para pedir los datos de una localidad
                 con base en sus coordenadas.
-                @Throws: TypError si los argumentos no son float.
-                HTTPError si el código de respuesta es de error.
+                Arroja los errores TypError si los argumentos
+                no son float y HTTPError si el código de respuesta es de error.
                 """
-                url = "http://api.openweathermap.org/data/2.5/weather" # String general para declararlo solo una vez
+                url = "http://api.openweathermap.org/data/2.5/weather"
                 if type(latitud) != float or type(longitud) != float:
                         raise TypeError('Formato de coordenadas inválido.')
-                """
-                Comprobamos que los argumentos sean de tipo flotante
-                pues la API requiere este tipo en las coordenadas.
-                """
+
                 parametros = {'lat'  : latitud,
                               'lon'  : longitud,
                               'appid': cons.LLAVES[0],
                               'lang' : 'es',
                               'units': 'metric'}
-                respuesta = req.get(url, params=parametros)        
+                respuesta = req.get(url, params=parametros)
+
                 if(respuesta.status_code != req.codes.ok):
                         respuesta.raise_for_status()
-                        """
-                        Checamos por el código de respuesta; verificamos que no
-                        se nos sean regresados códigos de error conocidos en la documentación:
-                        https://openweathermap.org/faq#:~:text=of%20City%20IDs%3F-,API%20errors,-API%20calls%20return
-                        requests ya tiene funciones para manejar malas respuestas:
-                        https://docs.python-requests.org/en/latest/user/quickstart/#:~:text=Response%20Status%20Codes
-                        """
-                respuesta = respuesta.json() # Una vez que comprobamos que la respuesta sea válida, la transformamos en un formato JSON.
+
+                respuesta = respuesta.json()
                 return respuesta
         
         
@@ -48,15 +41,15 @@ class reporteClima:
                 """
                 Método para extraer los datos más reelevantes de una
                 respuesta de la API.
+                Arroja los errores TypeError si la respuesta no es un
+                diccionario y ValueError si la respuesta está vacía.
                 """
                 if type(respuesta) != dict:
                         raise TypeError('Argumento inválido')
                 
                 if not bool(respuesta):
                         raise ValueError('Respuesta vacía')
-                """
-                Seleccionamos los datos de la respuesta para la salida.
-                """
+
                 try:
                         informacion_clima = {
                                 'clima'          : respuesta['weather'][0]['main'],
@@ -71,5 +64,3 @@ class reporteClima:
                         sys.exit(1)
                         
                 return informacion_clima
-                
-    
