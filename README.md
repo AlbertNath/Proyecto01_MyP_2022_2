@@ -4,11 +4,31 @@
 Programa que obtiene el clima del aereopuerto de salida y de destino según sus coordenadas, dado 
 un archivo en formato `.csv` de donde obtenemos la información. 
 
-## Ejecución: 
+## Ejecución:
+Primero, clone el repositorio.
+
+``` sh
+git clone https://github.com/AlbertNath/Proyecto01_MyP_2022_2.git
+```
+
+### Pruebas: 
+Para ejecutar las pruebas debe situarse en el directorio `src/` de la siguiente forma: 
+
+```sh
+cd Proyecto01_MyP_2022_2/src/
+```
+
+Luego, ejecute: 
+
+``` sh
+python3 -m unittest discover 
+```
+
+### Programa:
 Para ejecutar el proyecto una vez clonado, debe situarse en el directorio `src/` de la siguiente forma: 
 
 ```sh
-cd Proyecto01_MyP_2022_2/src
+cd Proyecto01_MyP_2022_2/src/
 ```
 
 Después ejecutar
