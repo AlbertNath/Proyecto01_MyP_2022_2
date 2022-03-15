@@ -1,7 +1,10 @@
+import sys
+sys.path.insert(1, '../../Proyecto01_MyP_2022_2/src/main')
+
 from salida import *
 from entrada import *
 from reporteClima import *
-from interfaz import *
+from gui.interfaz import *
 from aereopuerto import *
 from tkinter import *
 
