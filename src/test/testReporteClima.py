@@ -12,7 +12,7 @@ import unittest
 from main.reporteClima import *
 
 class TestReporteClima(unittest.TestCase):
-
+    
     def test_argumentos_solicita_datos(self):
         self.assertRaises(TypeError, solicita_datos, 'eggs', 12)
 

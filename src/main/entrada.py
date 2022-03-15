@@ -11,12 +11,12 @@ class Entrada:
         r = open(archivo, "r")
         lector = csv.reader(r)
         ticket = [] 
-        linea  = 0
+        linea = -1
         for i in lector:
             ticket.append(i)
             linea += 1
         r.close()
-        return ticket
+        return (ticket, linea)
     
     
     def carga_cache(self, datos:list):
