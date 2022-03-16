@@ -16,9 +16,9 @@ Es necesario usar `python3` al momento de ejecutar.
 
 Utilizamos las siguientes librerías en este proyecto, por lo que de no estar instaladas en su 
 entorno de python, recomendamos sean seguir los correspondientes manuales de instalación:
-- `[requests](https://docs.python-requests.org/es/latest/user/install.html)`
-- `[csv](https://pypi.org/project/python-csv/)`
-- `[tkinter](https://www.tutorialspoint.com/how-to-install-tkinter-in-python)`
+- `requests`: [manual](https://docs.python-requests.org/es/latest/user/install.html)
+- `csv`: [manual](https://pypi.org/project/python-csv/)
+- `tkinter`: [manual](https://www.tutorialspoint.com/how-to-install-tkinter-in-python)
 
 Una vez comprobado que estas librearías se encuentran en su entorno, debe ir al directorio 
 `main`: 
