@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(1, '../../Proyecto01_MyP_2022_2/src')
+
 from reporteClima import *
 from gui.interfaz import *
 
