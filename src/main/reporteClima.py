@@ -1,4 +1,5 @@
 import requests as req
+from requests.models import HTTPError
 import sys
 sys.path.insert(1, '../../Proyecto01_MyP_2022_2/src/main')
 import constantes as cons
@@ -18,23 +19,27 @@ class reporteClima:
                 Arroja los errores TypError si los argumentos
                 no son float y HTTPError si el código de respuesta es de error.
                 """
-                url = "http://api.openweathermap.org/data/2.5/weather"
-                if type(latitud) != float or type(longitud) != float:
-                        raise TypeError('Formato de coordenadas inválido.')
+                try:
+                        url = "http://api.openweathermap.org/data/2.5/weather"
+                        if type(latitud) != float or type(longitud) != float:
+                                raise TypeError('Formato de coordenadas inválido.')
 
-                parametros = {'lat'  : latitud,
-                              'lon'  : longitud,
-                              'appid': cons.LLAVES[0],
-                              'lang' : 'es',
-                              'units': 'metric'}
-                respuesta = req.get(url, params=parametros)
+                        parametros = {'lat'  : latitud,
+                                      'lon'  : longitud,
+                                      'appid': cons.LLAVES[0],
+                                      'lang' : 'es',
+                                      'units': 'metric'}
+                        respuesta = req.get(url, params=parametros)
 
-                if(respuesta.status_code != req.codes.ok):
-                        respuesta.raise_for_status()
+                        if(respuesta.status_code != req.codes.ok):
+                                respuesta.raise_for_status()
 
-                respuesta = respuesta.json()
-                return respuesta
-        
+                        respuesta = respuesta.json()
+                        return respuesta
+                except HTTPError:
+                        print('Error al tratar de contactar a la API\nAbortando')
+                        sys.exit(1)
+
         
         def depura_respuesta(self, respuesta):
                 """
