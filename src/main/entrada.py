@@ -1,4 +1,4 @@
-import csv #Necesario para procesar los csv
+import csv
 
 class Entrada:
     """Clase para manejo de entrada"""
@@ -43,4 +43,3 @@ class Entrada:
         """
         cache = self.carga_cache((self.leer_entrada("./csv/dataset1.csv")[0]))
         return cache
-

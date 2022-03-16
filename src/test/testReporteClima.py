@@ -1,13 +1,3 @@
-"""
-Un truco para que el archivo a evaluar en otro directorio
-sea accesible por el intérprete.
-"""
-import sys
-import os
-
-#SCRIPT_DIR = os.path.dirname(os.path.abspath('reporteClima'))
-#sys.path.append(os.path.dirname(SCRIPT_DIR))
-
 import unittest
 from  main.reporteClima import *
 

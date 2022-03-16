@@ -1,5 +1,8 @@
+import sys
+sys.path.insert(1, '../../Proyecto01_MyP_2022_2/src')
+
 from reporteClima import *
-from interfaz import *
+from gui.interfaz import *
 
 class Salida:
    
@@ -18,8 +21,3 @@ class Salida:
          dep = reporte.depura_respuesta(resp)
          puerto = aereopuerto(dep,key)
          gui.insertar(puerto,tv)
-
-     
-            
-
-            

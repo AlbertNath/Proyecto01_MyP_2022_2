@@ -13,6 +13,3 @@ class aereopuerto:
         self.sensacion_term = respDepurada['sensacion_term']
         self.viento_vel = respDepurada['sensacion_term']
         self.nubosidad = respDepurada['nubosidad']
-
-
-    

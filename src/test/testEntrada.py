@@ -1,10 +1,11 @@
 import unittest
 from main.entrada import *
 
- # Prueba unittest para Entradas
 class TestEntrada(unittest.TestCase):
-    # Prueba de que los tickets sean del formato correcto
+    """Prueba unittest para Entradas"""
+
     def test_tickets(self):
+        """Prueba de que los tickets sean del formato correcto"""
         clase = Entrada()
         archivo = "./csv/dataset1.csv"
         tickets = clase.leer_entrada(archivo)[0]
@@ -16,8 +17,9 @@ class TestEntrada(unittest.TestCase):
             self.assertRegex(tickets[i][3], '[+-]?[0-9]+\.[0-9]+', 'El formato de longitud o latitud es incorrecta')
             self.assertRegex(tickets[i][4], '[+-]?[0-9]+\.[0-9]+', 'El formato de longitud o latitud es incorrecta')
             self.assertRegex(tickets[i][5], '[+-]?[0-9]+\.[0-9]+', 'El formato de longitud o latitud es incorrecta')
-    # Prueba que el número de tickets sean 3000
+
     def test_lineas(self):
+        """Prueba que el número de tickets sean 3000"""
         clase = Entrada()
         archivo = "./csv/dataset1.csv"
         lineas = clase.leer_entrada(archivo)[1]

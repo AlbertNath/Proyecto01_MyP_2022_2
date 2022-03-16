@@ -1,7 +1,6 @@
 import requests as req
 import sys
 sys.path.insert(1, '../../Proyecto01_MyP_2022_2/src/main')
-#import main.constantes as cons
 import constantes as cons
 
 
